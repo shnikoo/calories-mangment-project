@@ -10,11 +10,15 @@ dotenv.config();
 
 const PORT = process.env.PORT || 7000;
 const MONGOURL = process.env.MONGO_URL;
+// Middleware to parse JSON request bodies
+app.use(express.json());
+
 
 mongoose.connect(MONGOURL).then(() => {
     console.log("Database is connected successfully.");
     app.listen(PORT, () => {
         console.log(`Server is running on port ${PORT}`);
+
     });
 }).catch((error)=>console.log(error));
 

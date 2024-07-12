@@ -36,8 +36,13 @@ const userSchema = new mongoose.Schema({
 const UsersModel = mongoose.model("users", userSchema)
 
 app.get("/getUsers", async(req,res) => {
-    const userData = await UsersModel.find();
-    res.json(userData);
+    try {
+        const userData = await UsersModel.find({}, { _id: 0, __v: 0 }); // Exclude _id and __v fields
+        res.json(userData);
+    } catch (err) {
+        console.error('Error fetching users:', err);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 });
 
 // About route to display developers' information

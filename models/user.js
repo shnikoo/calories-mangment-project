@@ -1,5 +1,9 @@
+//Shani Mirzaye 212355812
+//Omer Madhala 207917725
+
 import mongoose from 'mongoose';
 
+//Defines a Mongoose schema and model for a user entity in a MongoDB database
 const userSchema = new mongoose.Schema(
     {
         id: {

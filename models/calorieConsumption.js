@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 
+// Define the schema for calorie consumption data
 const calorieConsumptionSchema = new mongoose.Schema(
     {
         user_id: {
@@ -47,5 +48,5 @@ const calorieConsumptionSchema = new mongoose.Schema(
     { collection: 'calories' }
 );
 
-
+// Create and export the CalorieConsumption model
 export const CalorieConsumption = mongoose.model('CalorieConsumption', calorieConsumptionSchema);

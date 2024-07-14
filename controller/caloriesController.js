@@ -38,8 +38,6 @@ const getReport = async (req, res) => {
     const calories = await CalorieConsumption.find({ user_id, year, month });
     calories.forEach((CalorieConsumption) => {
       report[CalorieConsumption.category].push({
-        _id: CalorieConsumption._id, // MongoDB ID
-        id: CalorieConsumption.id, // Custom ID
         day: CalorieConsumption.day,
         description: CalorieConsumption.description,
         amount: CalorieConsumption.amount,

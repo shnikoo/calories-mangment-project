@@ -49,7 +49,7 @@ app.get("/getUsers", async(req,res) => {
 app.get('/about', (req, res) => {1
     // Array of objects describing developers
     const developers = [
-        { "firstname": "Shani", "lastname": "Aminov", "id": 212355812, "email": "shanimir2001@gmail.com" },
+        { "firstname": "Shani", "lastname": "Mirzaye", "id": 212355812, "email": "shanimir2001@gmail.com" },
         { "firstname": "Omer", "lastname": "Madhala", "id": 207917725, "email": "omermadhala181@gmail.com" }
     ];
     res.json(developers);

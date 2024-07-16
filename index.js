@@ -6,6 +6,7 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 import calrieConsumption from './routes/calorieConsumption.js';
 import user from './routes/user.js';
+import about from './routes/about.js'
 
 
 const app = express();  // Creating an Express application instance
@@ -29,14 +30,4 @@ mongoose.connect(MONGOURL).then(() => {
 // Mounting routes for calorie consumption and user management
 app.use('/', calrieConsumption);
 app.use('/', user);
-
-
-// Route to display information about developers
-app.get('/about', (req, res) => {
-    // Array of objects describing developers
-    const developers = [
-        { "firstname": "Shani", "lastname": "Mirzaye", "id": 212355812, "email": "shanimir2001@gmail.com" },
-        { "firstname": "Omer", "lastname": "Madhala", "id": 207917725, "email": "omermadhala181@gmail.com" }
-    ];
-    res.json(developers);
-});
+app.use('/',about);

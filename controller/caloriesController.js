@@ -2,7 +2,7 @@
 //Omer Madhala 207917725
 
 import mongoose from 'mongoose';
-import { CalorieConsumption } from "../models/index.js";
+import { CalorieConsumption } from "../models/calorieConsumption.js";
 
 // Add new calorie consumption item
 const addCalories = async (req, res) => {

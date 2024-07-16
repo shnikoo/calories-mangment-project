@@ -1,3 +1,6 @@
+//Shani Mirzaye 212355812
+//Omer Madhala 207917725
+
 import mongoose from 'mongoose';
 
 //Defines a Mongoose schema and model for a calorie entity in a MongoDB database
@@ -48,6 +51,7 @@ const calorieConsumptionSchema = new mongoose.Schema(
     { collection: 'calories' }
 );
 
-
+// Create and export the CalorieConsumption model based on the defined schema
 export const CalorieConsumption = mongoose.model('CalorieConsumption', calorieConsumptionSchema);
+// Export the CalorieConsumption model as the default export
 export default CalorieConsumption;
